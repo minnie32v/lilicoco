@@ -2,7 +2,8 @@
     Base
 \*------------------------------------*/
 *{
-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+        box-sizing: border-box;
 position:relative;
 /*border: 1px solid #000;*/
 }
@@ -212,6 +213,8 @@ visibility: hidden;
 	line-height: 22px;
 	padding: 4px 8px;
 	background-color: #484848;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	border-color: rgba(0,0,0,0);
 	width: 140px;
@@ -349,14 +352,20 @@ visibility: hidden;
 }
 
 .mobile-header .menu .menu-item .follow{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 @media (max-width: 1024px){
 	#popup-menu{
 		opacity: 0;
 		visibility: hidden;
+		-webkit-transition: all 0.3s;
+		-o-transition: all 0.3s;
 		transition: all 0.3s;
 		position: fixed;
 		right: 0;
@@ -364,7 +373,10 @@ visibility: hidden;
 		width: 60%;
 		height: 100%;
 		background-color: #f5f5f5;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 	#popup-menu:target{
 		opacity: 1;
@@ -420,10 +432,14 @@ visibility: hidden;
 	left: 50%;
 }
 .close-btn span:nth-child(1){
-	transform: translate(-50%,-50%) rotate(45deg);
+	-webkit-transform: translate(-50%,-50%) rotate(45deg);
+	    -ms-transform: translate(-50%,-50%) rotate(45deg);
+	        transform: translate(-50%,-50%) rotate(45deg);
 }
 .close-btn span:nth-child(2){
-	transform: translate(-50%,-50%) rotate(-45deg);
+	-webkit-transform: translate(-50%,-50%) rotate(-45deg);
+	    -ms-transform: translate(-50%,-50%) rotate(-45deg);
+	        transform: translate(-50%,-50%) rotate(-45deg);
 }
 
 
@@ -435,6 +451,8 @@ visibility: hidden;
 
 .navbar{
 	height: 180px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 .navbar.active{
@@ -445,6 +463,8 @@ visibility: hidden;
 .topbar{
 	background-color: #484848;
 	height: 40px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 .navbar.active .topbar{
@@ -525,6 +545,8 @@ visibility: hidden;
 /*login*/
 .login-icon{
 	color: #fff;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -534,6 +556,8 @@ visibility: hidden;
 
 .login-link{
 	padding-right: 4px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -544,6 +568,8 @@ visibility: hidden;
 /*wishlist*/
 .wishlist-icon{
 	color: #fff;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -553,6 +579,8 @@ visibility: hidden;
 
 .wishlist-link{
 	padding-right: 4px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -563,6 +591,8 @@ visibility: hidden;
 /*my_bag*/
 .mybag-icon{
 	color: #fff;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -572,6 +602,8 @@ visibility: hidden;
 
 .mybag-link{
 	padding-right: 4px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
 
@@ -594,7 +626,6 @@ visibility: hidden;
 	background-image: url(../image/lilicoco@1x.png);
 	background-position: center;
 	/*撐滿容器*/
-	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;
 	/*文字溢出*/
@@ -605,8 +636,14 @@ visibility: hidden;
 	overflow: hidden;
 	margin:16px 0;
 	/*transition: all 0.3s;*/
-	transition-duration: 0.5s;
-    transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
     transition-property: all;
 }
 .mobile-header .logo{
@@ -616,7 +653,6 @@ visibility: hidden;
 	background-image: url(../image/lilicoco@0.5x.png);
 	background-position: center;
 	/*撐滿容器*/
-	-webkit-background-size: contain;
 	background-size: contain;
 	background-repeat: no-repeat;
 	/*文字溢出*/
@@ -627,8 +663,14 @@ visibility: hidden;
 	overflow: hidden;
 	margin:16px 12px;
 	/*transition: all 0.3s;*/
-	transition-duration: 0.5s;
-    transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s;
+	     -o-transition-duration: 0.5s;
+	        transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease;
+         -o-transition-timing-function: ease;
+            transition-timing-function: ease;
+    -webkit-transition-property: all;
+    -o-transition-property: all;
     transition-property: all;
 
 }
@@ -645,8 +687,12 @@ visibility: hidden;
 
 /*menu*/
 .menu{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin:8px 0;
 	text-align: center;
 }
@@ -694,6 +740,8 @@ visibility: hidden;
 
 /*main*/
 .main{
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	padding-top: 200px;
 }
@@ -702,6 +750,8 @@ visibility: hidden;
 }
 @media(max-width: 1024px){
 	.main{
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
 	transition: all 0.3s;
 	padding-top: 60px;
 	}
@@ -752,8 +802,12 @@ visibility: hidden;
 
 /*product-menu*/
 .product-menu{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content:flex-start;
+	-webkit-box-pack:start;
+	    -ms-flex-pack:start;
+	        justify-content:flex-start;
 }
 .product-menu-item {
 	padding-right: 4px;
@@ -857,8 +911,12 @@ visibility: hidden;
 
 /*footer*/
 .footer-menu{
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	margin:8px 0;
 	text-align: center;
 }
@@ -1020,7 +1078,8 @@ visibility: hidden;
 	outline: none;
 	color: #fff;
 	font-size: 24px;
-	box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+	        box-shadow: 0 3px 5px rgba(0,0,0,0.5);
 }
 
 .owl-theme .owl-nav button.owl-prev{
